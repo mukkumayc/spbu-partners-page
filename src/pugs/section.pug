@@ -1,0 +1,7 @@
+mixin section(header, style)
+  section.section(class=style === "dark" ? "bg-dark" : "")&attributes(attributes)
+    .container
+      if header
+        h2(class=style === "dark" ? "text-light" : "").section__header= header
+      block
+

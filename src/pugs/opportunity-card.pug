@@ -1,0 +1,9 @@
+include card
+
+mixin opportunity-card(pic, text)
+  +card.bg-secondary.opportunity-card
+    +slot("body").opportunity-card__body
+      div.opportunity-card__body
+        img(src=pic).card__image
+        .opportunity-card__text-wrapper
+          p.card__text.text-light.opportunity-card__text= text

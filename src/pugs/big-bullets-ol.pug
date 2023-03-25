@@ -1,0 +1,14 @@
+mixin big-bullets-ol
+  - const items = []
+  - const attrs = {}
+  mixin item(name)
+    - items.push(block)
+      
+
+  block
+
+  .big-bullets-ol&attributes(attributes)
+    each i in items
+      li.big-bullets-ol__li
+        .big-bullets-ol__li-wrapper
+          - i()

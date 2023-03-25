@@ -1,0 +1,94 @@
+include card
+include section
+include big-bullets-ol
+include opportunity-card
+include partnership-card
+
+.page-root
+  +section("Партнерам")
+
+  +section.cooperation-section
+    +card.cooperation-card
+      +slot("header")
+        h2 Приглашаем к сотрудничеству!
+      +slot("body")
+        p.card__text.cooperation-card__text. 
+          Центр развития электронных образовательных ресурсов СПбГУ занимается разработкой, сопровождением и реализацией образовательных онлайн-продуктов, сочетающих в себе академические традиции первого университета страны и современные научные разработки.
+
+  +section("Возможности сотрудничества", "dark")
+    -
+      const oppCards = [
+        {
+          text: "Использование онлайн\u2011курсов СПбГУ для внедрения в образовательный процесс вашей организации в качестве самостоятельных дисциплин или части образовательной программы (организация обучения по гибкому графику)",
+          img: "images/Icon_1.png"
+        },
+        {
+          text: "Совместная разработка образовательных онлайн\u2011продуктов",
+          img: "images/Icon_2.png"
+        },
+        {
+          text: "Создание образовательных онлайн\u2011продуктов для вашей организации",
+          img: "images/Icon_3.png"
+        },
+      ]
+    each card in oppCards 
+      +opportunity-card(card.img, card.text)
+
+  +section("Преимущества сотрудничества с СПбГУ").py-3
+    +big-bullets-ol
+      +item.
+        СПбГУ является одним из крупнейших научно-образовательных центров в Европе и мире
+      +item.
+        В СПбГУ учатся более 20 тысяч студентов, работают лауреаты Нобелевской и филдсовской премий, созданы более 15 крупных лабораторий и 24 ресурсных центров, входящих в ведущий Научный парк России
+      +item.
+        СПбГУ &#x2014; соучредитель и <strong>единственный представитель России</strong> во <span class="text-secondary"><strong>Всемирном союзе массовых открытых онлайн-курсов</strong></span>
+      +item.
+        СПбГУ является <strong>единственным российским вузом</strong>, чьи онлайн-курсы представлены на крунейшей китайской национальной образовательной платформе <span class="text-secondary"><strong>XuetangX</strong></span>
+      +item.
+        СПбГУ занимал первое место по количеству онлайн-курсов среди вузов Европы на крупнейшей международной образовательной платформе <span class="text-secondary"><strong>Coursera</strong></span> и входил в мировой ТОП-5 среди вузов &#x2014; партнеров Coursera (до 4 марта 2022 года)
+      +item.
+        СПбГУ является одним из учиредителей Национальной платформы <span class="text-secondary"><strong>&laquo;Открытое образование&raquo;</strong></span>, созданной ведущими российскими вузами, и занимает <strong>первое место</strong> как по количеству размещенных онлайн-курсов, так и по охвату аудитории (более 2 млн)
+      +item.
+        На данный момент СПбГУ создано <strong>более 300 онлайн-курсов</strong> на русском, английском и китайском языках, которые с успехом реализуются <strong>на образовательных платформах:</strong>
+        <ul class="ul-disc big-bullets-ol__ul">
+          <li>
+            Национальной платформе <span class="text-secondary"><strong>&laquo;Открытое образование&raquo;</strong></span>,
+          </li>
+          <li>
+            международной образовательной платформе <span class="text-secondary"><strong>Coursera</strong></span>,
+          </li>
+          <li>
+            китайской образовательной платформе <span class="text-secondary"><strong>XuetangX</strong></span>,
+          </li>
+          <li>
+            российской образовательной платформе <span class="text-secondary"><strong>Stepik</strong></span>,
+          </li>
+        </ul>
+        а также на собственной образовательной онлайн-платформе <span class="text-secondary"><strong>&laquo;Открытое образовательное пространство СПбГУ&raquo;</strong></span>
+      +item.
+        Более 90 вузов-партнеров, использующих онлайн-курсы СПбГУ при организации учебного процесса
+      +item.
+        &laquo;Открытое образовательное пространство СПбГУ&raquo; &#x2014; современная образовательная платформа управления обучением, собравшая в себя многолетний опыт реализации онлайн-курсов
+
+  +section("По вопросам сотрудничества:", "dark").footer
+    div.contact-email partner.online@spbu.ru
+    - 
+      const partnershipCards = [
+        "Перечень онлайн-курсов СПбГУ, которые могут быть использованы в образовательной деятельности по договору сетевого сотрудничества",
+        "Перечень онлайн-курсов СПбГУ для школьников",
+        "Типовой договор сетевого сотрудничества для реализации онлайн-курсов СПбГУ в образовательной деятельности сторонними учреждениями"
+      ]
+    .footer-content
+      .cards-column
+        each cardText in partnershipCards
+          +partnership-card(cardText)
+      .people-img-column
+        video.picture-link__img(src="images/privet.webm" autoplay loop muted playsinline)
+      .social-media-row
+        a.picture-link.youtube-link(href="")
+          img.picture-link__img(src="images/YouTube.png")
+        a.picture-link.vk-link(href="")
+          img.picture-link__img(src="images/VK.png")
+        a.picture-link.telegram-link(href="")
+          img.picture-link__img(src="images/Telegram.png")
+

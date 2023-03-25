@@ -1,0 +1,16 @@
+mixin card
+  - const slots = {}
+  - const attrs = {}
+  mixin slot(name)
+    - slots[name] = block
+      
+
+  block
+
+  .card&attributes(attributes)
+    if slots["header"]
+      .card__header
+        - slots["header"]()
+    if slots["body"]
+      .card__body 
+        - slots["body"]()

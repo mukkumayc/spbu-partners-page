@@ -1,0 +1,134 @@
+.opportunity-card {
+    height: 11em;
+    margin: 2em 0;
+}
+
+.opportunity-card__body {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+
+.opportunity-card__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+@media screen and (min-width: 1400px) {
+    .opportunity-card__text-wrapper {
+        margin-right: 7em;
+    }
+}
+
+@media screen and (max-width: 1399.98px) {
+    .opportunity-card__text-wrapper {
+        margin-right: 1em;
+    }
+}
+
+
+.cooperation-card {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 1em 3em;
+    /* position: absolute; */
+    width: 9000px;
+    -webkit-box-shadow: -25px 0px 20px -10px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: -25px 0px 20px -10px rgba(34, 60, 80, 0.2);
+    box-shadow: -25px 0px 20px -10px rgba(34, 60, 80, 0.2);
+}
+
+@media screen and (min-width: 1400px) {
+    .cooperation-card__text {
+        width: 1200px;
+    }
+}
+
+@media screen and (max-width: 1399.98px) {
+    .cooperation-card__text {
+        width: 750px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .cooperation-card__text {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .cooperation-card__text {
+        width: auto;
+    }
+    .opportunity-card__body {
+        grid-template-columns: 1fr 3fr;
+    }
+    .cooperation-card {
+        width: auto;
+    }
+    .cooperation-section > .container {
+        padding-right: 0;
+    }
+}
+
+.cooperation-section {
+    background-image: linear-gradient(to bottom, var(--light), var(--light) 50%, var(--dark) 50%, var(--dark));
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 2em;
+    margin-top: -2em;
+}
+
+.contact-email {
+    font-weight: 300;
+    font-size: 1.5em;
+    color: var(--light);
+    margin-top: -0.8em;
+}
+
+.footer__header {
+    margin: 0;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.footer-content {
+    margin: 2em 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2em;
+}
+
+.social-media-row {
+    display: flex;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.picture-link {
+    display: block;
+    width: 3em;
+    /* height: 3em; */
+}
+
+.picture-link__img {
+    width: 100%;
+    object-fit: contain;
+}
+
+body {
+    margin: 0;
+}
+
+.people-img-column {
+    align-self: flex-end;
+}

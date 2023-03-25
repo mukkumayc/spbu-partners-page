@@ -1,0 +1,12 @@
+.text-light {
+    color: var(--light);
+}
+
+.text-secondary {
+    color: var(--secondary);
+    display: inline;
+}
+
+.fwl {
+    font-weight: lighter;
+}

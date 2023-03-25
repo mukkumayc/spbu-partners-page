@@ -1,0 +1,27 @@
+
+
+.card {
+    background-color: white;
+    padding: 1em;
+    border-radius: 12px;
+}
+
+.card__image {
+    width: 100%;
+    /* margin: 0 1em; */
+}
+
+.card__body {
+    height: 100%;
+    word-wrap: break-word;
+}
+
+.card__text {
+    width: auto;
+    word-wrap: break-word;
+}
+
+.card-material {
+    padding: 1em;
+    border: 1px solid var(--light);
+}
